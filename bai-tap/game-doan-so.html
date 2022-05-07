@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Game đoán số</h2>
+    <button onclick="Play()">Chơi</button>
+</body>
+<script>
+    function Play() {        
+        let number = parseInt(prompt("Nhập vào 1 số tự nhiên bất kỳ, lớn hơn 1: "))
+        let result = Math.floor(Math.random() * (number - 1) + 1)
+        console.log(result)
+        let count = 0
+        let enter
+        do {
+            enter = prompt("Nhập giá trị muốn đoán: ")
+            if (enter < result && count < 2) {
+                alert("Tăng lên!!")
+                count++
+            } else if (enter > result && count < 2) {
+                alert("Giảm xuống!!")
+                count++
+            } else if (enter != result && count == 2) {
+                alert("You fail!!")
+                break
+            } else {
+                alert("You win!!")
+                break
+            }
+        }
+        while (true)
+                
+    }
+</script>
+</html>
