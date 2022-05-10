@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    let number = prompt("Nhập 1 số bất kỳ: ")
+    let du1
+    let du2 = 0
+    let result
+    while ((number / 10) != 0) {
+        du1 = number % 10
+        result = du2 * 10 + du1
+        du2 = result
+        number = Math.floor(number / 10)
+    }
+    alert("Số đảo ngược là: " + result)
+
+    // let number = prompt("Nhập 1 số bất kỳ: ")
+    // let number1 =""
+    // while((number / 10) != 0) {
+    //     number1 += number % 10
+    //     number = Math.floor(number/10)
+    // }
+    // alert("Số đảo ngược là: " + number1)
+</script>
+</html>
